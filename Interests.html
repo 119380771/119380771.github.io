@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Interests</title>
+		<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width-device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+		
+		<style>
+		
+		/* Styling the ImageScroll */
+    #scroller {
+        position: relative;
+    }
+	
+	/* Styling the ImageScroll */
+    #scroller .innerScrollArea {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+	
+	/* Styling the ImageScroll */
+    #scroller ul {
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+	
+	/* Styling the ImageScroll */
+    #scroller li {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        position: absolute;
+    }
+	
+	/* Style the description paragraph of my interests */
+	.interestdesc {
+	font-size: 18px;
+	margin-left: 15%;
+	}
+	
+	/* Style the title for eachn of my interests */
+	.interesttitle {
+	margin-left: 15%;
+	font-size: 21px;
+	}
+	
+	/* Styling the hr line */
+	hr {
+		height: 1px;
+		border: none;
+		text-align: center;
+		background-color: #A9A9A9;
+		width: 350px;
+		}
+		
+</style>
+		
+		
+		<body>
+		
+		<!-- Creating a side navigation panel which links to other pages -->
+		<div class = "sidenav">
+				<a href="pillar-v1.0.1/CV.html" class="sidenav__link"><i class="material-icons">assignment_ind</i>Curriculum Vitae</a>
+				<a href="Interests.html" class="sidenav__link"><i class="material-icons">sentiment_very_satisfied</i>Interests</a>
+				<a href="Consulting.html" class="sidenav__link"><i class="material-icons">store</i>Consulting Services Online Shop</a>
+				<a href="Ebus1.html" class="sidenav__link"><i class="material-icons">credit_card</i>Ebusiness</a>
+				<br>
+				<br>
+				<br>
+				<a href="index.html" class="sidenav__link"><i class="material-icons">home</i>Home Page</a>
+		</div>
+	
+	<!-- Creating a header banner with content -->
+		<div class="header">
+		<h1>My Interests</h1>
+		</div>
+		
+		<!-- Creating content for the main page -->
+		
+		<!-- Naming and describing my favourite sports -->
+		<div id="interests1">
+			<h1 style="text-align:center">Sport</h1>
+			<hr> 
+		<br>
+			<ul>
+			
+				<li><p class="interestdesc">Sports are defined as physical or mental exertion by individuals and are committed to maintaining physical or mental fitness. There are many types of exercise that can be practiced  as a healthy habit, such as walking, horseriding, swimming or athletics and these sports have many benefits on the human body and mind. Sport makes the body ideal, consistent, and healthy, as it strengthens it and fights obesity.</p></li>
+				
+				<p class="interesttitle"><strong><u>Swimming</u></strong></p>
+				<li><p class="interestdesc">Swimming is a good all-round activity because it: keeps your heart rate up but takes some of the impact stress off your body. It builds endurance, muscle strength and cardiovascular fitness. It helps maintain a healthy weight, healthy heart and lungs. If you were to ask me what my favourite sport is, my answer would be swimming. I started learning how to swim when I was five years old and I have been swimming ever since. There are many reasons for my love to this sport. The first reason that I love swimming is that it can be extremely relaxing. I love the feeling of floating on the water and feeling almost weightless. I find that whenever I leave the pool I feel totally relaxed and at ease. On the other hand, it can also be a fast-paced competitive sport which raises your heartbeat. It’s amazing pushing yourself to the challenge of beating someone else to the finish line and it’s great fun racing across the pool as fast as you can! Trying little tricks like underwater handstands and flips also puts a big smile on my face.</p></li>
+				
+				<p class="interesttitle"><strong><u>Tennis</u></strong></p>
+				<li><p class="interestdesc">Tennis is one of the most popular individual sports in the world. I found tennis a wonderful way to make new friends and socialise and as I improved I began to enjoy the sport even more. I played regularly two to three times a week and I then started playing in tournaments and on teams from my local club. For me, tennis combines a wonderful social aspect with healthy competition and of course, this brings plenty of health benefits in itself. Not only do you build up your cardio on the court but your reflexes, arms and core get a good workout too.</p></li>
+				
+			</ul>
+		
+		</div>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<!-- Creating an ImageScroll with JQuery for photos of some of my interests -->
+		<div id="scroller" style="width: 550px; height: 400px; margin: 0 auto;">
+			<div class="innerScrollArea">
+			<ul>
+				<li><img src="slideshow/tennis.jpg" alt="Tennis" width="650" height="300" /></li>
+				<li><img src="slideshow/swimming.jpg" alt="Swimming" width="650" height="300" /></li>
+				<li><img src="slideshow/france1.jpg" alt="France" width="650" height="300" /></li>
+				<li><img src="slideshow/spain1.jpg" alt="Spain" width="650" height="300" /></li>
+
+			</ul>
+			</div>
+		</div>		
+		
+		<!-- JavaScript code for the ImageScroll -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script>
+    $(function(){
+        var scroller = $('#scroller div.innerScrollArea');
+        var scrollerContent = scroller.children('ul');
+        scrollerContent.children().clone().appendTo(scrollerContent);
+        var curX = 0;
+        scrollerContent.children().each(function(){
+            var $this = $(this);
+            $this.css('left', curX);
+            curX += $this.outerWidth(true);
+        });
+        var fullW = curX / 2;
+        var viewportW = scroller.width();
+
+        // Scrolling speed management
+        var controller = {curSpeed:0, fullSpeed:1.5};
+        var $controller = $(controller);
+        var tweenToNewSpeed = function(newSpeed, duration)
+        {
+            if (duration === undefined)
+                duration = 600;
+            $controller.stop(true).animate({curSpeed:newSpeed}, duration);
+        };
+
+        // Pause on hover
+        scroller.hover(function(){
+            tweenToNewSpeed(0);
+        }, function(){
+            tweenToNewSpeed(controller.fullSpeed);
+        });
+
+        // Scrolling management; start the automatical scrolling
+        var doScroll = function()
+        {
+            var curX = scroller.scrollLeft();
+            var newX = curX + controller.curSpeed;
+            if (newX > fullW*2 - viewportW)
+                newX -= fullW;
+            scroller.scrollLeft(newX);
+        };
+        setInterval(doScroll, 20);
+        tweenToNewSpeed(controller.fullSpeed);
+    });
+	</script>
+		
+		
+		<!-- Naming and describing my travel -->
+		<div id="interests2">
+			<h1 style="text-align:center">Travel</h1>
+			<hr>
+		
+			<ul>
+			
+			<li><p class="interestdesc">Travelling means going from one place to another for different purposes. Many travellers explore to see the unseen and know the unknown. The travellers also travel to the most beautiful places of the world which uphold the existence of nature.  At the same time, people do not travel fro the same purposes. Someone travels to gain knowledge and experience, someone travels for pleasure, someone travels for business purposes etc. There are different types of travelling like- travelling by air, bus, boat, train, bus etc. Every travel journey has much educative value. It is a part of education. Our education and book knowledge remain imperfect without travelling. For this reason, we can learn many things by travelling.</p></li>
+		
+			<h2 class="interesttitle"><u>France</u></h2>
+			<li><p class="interestdesc">My first visit to Paris was a remarkable experience, which I will never forget. It was a great feeling to arrive in Paris and see the city of light ­– a modern city with a very deep sense of history. I will never forget the moment when I first drove on the highway, passed the canals and saw the monuments. It was like a huge open-air museum. It was love at first sight. When I were in the centre of Paris, I saw Hotel de Ville. It was a magnificent large building that looked like a palace. It was remarkable! I stayed in Paris for ten days and had a fantastic time. I loved everything about this romantic city and vowed to never hesitate to come back to experience it again and again. I also promised myself that I would learn the language!</p></li>
+		
+			<h2 class="interesttitle"><u>Spain</u></h2>
+			<li><p class="interestdesc">It's always a good time to travel to Spain. That's because this country in southern Europe has all the ingredients to make your visit an unforgettable experience. Cities which bear the marks of a rich mixture of cultures, monuments and natural spaces awarded the World Heritage designation by the UNESCO, some of the world's most important museums, beaches to suit everybody, a pleasant climate all year round, the healthy Mediterranean diet, typically Spanish traditions such as flamenco and bullfighting. I visited Barcelona, and well what can I say, I fell in love with the city! Wonderful city, full of beautiful architecture, scenery, beaches and food.</p></li>
+			
+			</ul>
+		</div>
+		
+		<br>
+		
+		</body>
+		
+</html>

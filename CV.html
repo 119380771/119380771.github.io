@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" type="text/css" href="Stylesheet.css">
+	
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive Resume Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	  
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+       
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
+
+	<style>
+		/* Style the buttons at the top of the page */
+		.cvbuttons button {
+		background-color: #F25F1F;
+		border-radius: 50%;
+		color: black;
+		padding: 15px 25px;
+		cursor: pointer;
+		width: 35%;
+		display: block;
+		font-size: 20px;
+		margin: auto;
+		}
+		
+		/* Add a background color on hover */
+		.cvbuttons button:hover {
+		background-color: #CF511A;
+		color: white;
+		}
+		
+	</style>
+	
+</head> 
+
+<body>	
+	
+	<br>
+	<!-- Creating buttons for navigation -->
+	 <div class="cvbuttons">
+		<button onclick="window.location.href = 'file:///C:/Users/jenny/Desktop/new%20IS1113%20project/Interests.html';"><i class="material-icons">sentiment_very_satisfied</i>  Interests</button>
+		<button onclick="window.location.href = 'file:///C:/Users/jenny/Desktop/new%20IS1113%20project/Consulting.html';"><i class="material-icons">store</i>  Consulting Services Online Shop</button>
+		<button onclick="window.location.href = 'file:///C:/Users/jenny/Desktop/new%20IS1113%20project/Ebus1.html';"><i class="material-icons">credit_card</i>  Ebusiness</button>
+		<button onclick="window.location.href = 'file:///C:/Users/jenny/Desktop/new%20IS1113%20project/index.html';"><i class="material-icons">home</i>  Home page</button>
+	 </div>
+	 
+    <article class="resume-wrapper text-center position-relative">
+	    <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
+		    <header class="resume-header pt-4 pt-md-0">
+			    <div class="media flex-column flex-md-row">
+				    <img class="mr-3 img-fluid picture mx-auto" src="data:image/png;base64,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" alt="">		  
+				    <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+					    <div class="primary-info">
+						    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Evgania Demidenkova</h1>
+						    <div class="title mb-3">BIS Student at University College Cork</div>
+						    <ul class="list-unstyled">
+							    <li class="mb-2"><a href="#"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>********@email.com</a></li>
+							    <li><a href="#"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>08* *** ****</a></li>
+						    </ul>
+					    </div><!--//primary-info-->
+					    <div class="secondary-info ml-md-auto mt-2">
+						    <ul class="resume-social list-unstyled">
+				                <li class="mb-3"><a href="#"><span class="fa-container text-center mr-2"><i class="fab fa-linkedin-in fa-fw"></i></span>linkedin.com/in/*********</a></li>
+				                <li class="mb-3"><a href="#"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/*********</a></li>
+						    </ul>
+					    </div><!--//secondary-info-->
+					    
+				    </div><!--//media-body-->
+			    </div><!--//media-->
+		    </header>
+		    <div class="resume-body p-5">
+			    <section class="resume-section summary-section mb-5">
+				    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">About Me</h2>
+				    <div class="resume-section-content">
+					    <p class="mb-0">My name is Evgania Demidenkova and I am **** years of age. My birthday is the *** of ****** ****. I am currently a full-time student studying Business Information Systems (otherwise known as BIS) in University College Cork (UCC) in Ireland. I am a First Year student and the duration of this course is four years. I have experience in many areas of the business industry, from retail to food to hotel maintenance. I am highly organised, detail orientated and provide friendly and professional customer service. These strong interpersonal skills are proven through customer satisfaction and peer recognition awards.</p>
+					</div>
+			    </section><!--//summary-section-->
+			    <div class="row">
+				    <div class="col-lg-9">
+					    <section class="resume-section experience-section mb-5">
+						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
+						    <div class="resume-section-content">
+							    <div class="resume-timeline position-relative">
+								    <article class="resume-timeline-item position-relative pb-5">
+									    
+									    <div class="resume-timeline-item-header mb-2">
+										    <div class="d-flex flex-column flex-md-row">
+										        <h3 class="resume-position-title font-weight-bold mb-1">Waitress</h3>
+										        <div class="resume-company-name ml-auto">Ramen</div>
+										    </div><!--//row-->
+										    <div class="resume-position-time">2019 - Present</div>
+									    </div><!--//resume-timeline-item-header-->
+									    <div class="resume-timeline-item-desc">
+										    <p> - - County Cork - - </p>
+										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Roles/Responsibilities:</h4>
+										     <ul>
+											    <li>Take the customers orders.</li>
+											    <li>Seat the customers.</li>
+											    <li>Communicate the orders through the kitchen staff.</li>
+												<li>Help with the customer service and cleaning.</li>
+										    </ul>
+									    </div><!--//resume-timeline-item-desc-->
+
+								    </article><!--//resume-timeline-item-->
+								    
+								    <article class="resume-timeline-item position-relative pb-5">
+									    
+									    <div class="resume-timeline-item-header mb-2">
+										    <div class="d-flex flex-column flex-md-row">
+										        <h3 class="resume-position-title font-weight-bold mb-1">Cashier</h3>
+										        <div class="resume-company-name ml-auto">Supervalu</div>
+										    </div><!--//row-->
+										    <div class="resume-position-time">2018 - 2019</div>
+									    </div><!--//resume-timeline-item-header-->
+									    <div class="resume-timeline-item-desc">
+										  <p> - - County Cork - - </p>
+										  <h4 class="resume-timeline-item-desc-heading font-weight-bold">Roles/Responsibilities:</h4>
+										    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+										    <ul>
+											    <li>Assist the customers with locating items.</li>
+											    <li>Answers the customers' questions.</li>
+											    <li>Operating technologies.</li>
+												<li>Replenish empty shelves.</li>
+										    </ul>
+                                            <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+										    <ul class="list-inline">
+											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Scanners</span></li>
+											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Cash Registers</span></li>
+											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Scales</span></li>
+										    </ul>
+									    </div><!--//resume-timeline-item-desc-->
+
+								    </article><!--//resume-timeline-item-->
+								    
+								    <article class="resume-timeline-item position-relative pb-5">
+									    
+									    <div class="resume-timeline-item-header mb-2">
+										    <div class="d-flex flex-column flex-md-row">
+										        <h3 class="resume-position-title font-weight-bold mb-1">HouseKeeping</h3>
+										        <div class="resume-company-name ml-auto">Maldron Hotel</div>
+										    </div><!--//row-->
+										    <div class="resume-position-time">2016 - 2018</div>
+									    </div><!--//resume-timeline-item-header-->
+									    <div class="resume-timeline-item-desc">
+										  <p> - - County Cork - - </p>
+										  <h4 class="resume-timeline-item-desc-heading font-weight-bold">Roles/Responsibilities:</h4>
+										     <ul>
+											    <li>Replenish room supplies for the refrigerator, bathroom and work desk.</li>
+											    <li>Oversee laundry of hotel linen, bedding and towels.</li>
+											    <li>Responsible for proper disposal of garbage as outlined by management.</li>
+										    </ul>
+									    </div><!--//resume-timeline-item-desc-->
+
+								    </article><!--//resume-timeline-item-->
+								    
+								    <article class="resume-timeline-item position-relative">
+									    
+									    <div class="resume-timeline-item-header mb-2">
+										    <div class="d-flex flex-column flex-md-row">
+										        <h3 class="resume-position-title font-weight-bold mb-1">Customer Service Representative <small class="text-muted">(Intern)</small></h3>
+										        <div class="resume-company-name ml-auto">Penneys</div>
+										    </div><!--//row-->
+										    <div class="resume-position-time">2015</div>
+									    </div><!--//resume-timeline-item-header-->
+									    <div class="resume-timeline-item-desc">
+										    <p> - - County Cork - - </p>
+										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Roles/Responsibilities:</h4>
+										    <ul>
+											    <li>Help customers with questions or complaints.</li>
+											    <li>Give customers information about products or services.</li>
+											    <li>Take orders and process returns.</li>
+										    </ul>
+									    </div><!--//resume-timeline-item-desc-->
+
+								    </article><!--//resume-timeline-item-->
+								    
+								    
+							    </div><!--//resume-timeline-->
+							    
+							    
+							    
+							    
+							    
+							    
+						    </div>
+					    </section><!--//experience-section-->
+				    </div>
+				    <div class="col-lg-3">
+					    <section class="resume-section skills-section mb-5">
+						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills</h2>
+						    <div class="resume-section-content">
+						        <div class="resume-skill-item">
+							        <h4 class="resume-skills-cat font-weight-bold">Frontend</h4>
+							        <ul class="list-unstyled mb-4">
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Determination</div>
+									        <div class="progress resume-progress">
+											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+								        </li>
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Persistence</div>
+									        <div class="progress resume-progress">
+											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+								        </li>
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Enthusiastic &amp; Eager to Learn</div>
+									        <div class="progress resume-progress">
+											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+								        </li>
+								        
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Loyalty</div>
+									        <div class="progress resume-progress">
+											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+								        </li>
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Honesty</div>
+									        <div class="progress resume-progress">
+											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 92%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+								        </li>
+							        </ul>
+						        </div><!--//resume-skill-item-->
+						        
+						        <div class="resume-skill-item">
+						            <h4 class="resume-skills-cat font-weight-bold">Backend</h4>
+							        <ul class="list-unstyled">
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Problem-Solving</div>
+									        <div class="progress resume-progress">
+											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+								        </li>
+								        <li class="mb-2">
+								            <div class="resume-skill-name">Time Management</div>
+									        <div class="progress resume-progress">
+											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 79%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+								        </li>
+								  
+							        </ul>
+						        </div><!--//resume-skill-item-->
+						      
+						    </div><!--resume-section-content-->
+					    </section><!--//skills-section-->
+					    <section class="resume-section education-section mb-5">
+						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
+						    <div class="resume-section-content">
+							    <ul class="list-unstyled">
+								    <li class="mb-2">
+								        <div class="resume-degree font-weight-bold">Cork Secondary School</div>
+								        <div class="resume-degree-org">County Cork</div>
+								        <div class="resume-degree-time">2012 - 2019</div>
+								    </li>
+								    <li>
+								        <div class="resume-degree font-weight-bold">Cork Primary School</div>
+								        <div class="resume-degree-org">County Cork</div>
+								        <div class="resume-degree-time">2006 - 2012</div>
+								    </li>
+							    </ul>
+						    </div>
+					    </section><!--//education-section-->
+					    <section class="resume-section reference-section mb-5">
+						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Awards</h2>
+						    <div class="resume-section-content">
+							    <ul class="list-unstyled resume-awards-list">
+								    <li class="mb-2 pl-4 position-relative">
+								        <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
+								        <div class="resume-award-name">Best Performance Award</div>
+								        <div class="resume-award-desc">Award for giving the best performance on work grounds.</div>
+								    </li>
+								    <li class="mb-0 pl-4 position-relative">
+								        <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
+								        <div class="resume-award-name">Employee Of the Month</div>
+								        <div class="resume-award-desc">Award for being the top employee of the month and providing the best quality service for customers.</div>
+								    </li>
+							    </ul>
+						    </div>
+					    </section><!--//interests-section-->
+					    <section class="resume-section language-section mb-5">
+						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
+						    <div class="resume-section-content">
+							    <ul class="list-unstyled resume-lang-list">
+								    <li class="mb-2"><span class="resume-lang-name font-weight-bold">English</span> <small class="text-muted font-weight-normal">(Native)</small></li>
+									<li class="mb-2 align-middle"><span class="resume-lang-name font-weight-bold">French</span> <small class="text-muted font-weight-normal">(Professional)</small></li>
+									<li><span class="resume-lang-name font-weight-bold">Russian</span> <small class="text-muted font-weight-normal">(Professional)</small></li>
+							    </ul>
+						    </div>
+					    </section><!--//language-section-->
+				
+					    
+				    </div>
+			    </div><!--//row-->
+		    </div><!--//resume-body-->
+		    
+		    
+	    </div>
+    </article>  
+
+    
+    <footer class="footer text-center pt-2 pb-5">
+	     <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+                <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+    </footer>
+
+    
+
+</body>
+</html> 
+
